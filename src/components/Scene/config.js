@@ -4,7 +4,7 @@ export default {
     HEIGHT: 600,
 
     // Set some camera attributes.
-    VIEW_ANGLE: 45,
+    VIEW_ANGLE: 35,
     get ASPECT() { return this.WIDTH / this.HEIGHT },
     NEAR: 0.1,
     FAR: 5000,
@@ -12,8 +12,8 @@ export default {
     // Set some point lights
     POINT_LIGHT: {
         color: '0xFFFFFF',
-        x: 10,
-        y: 50,
-        z: 130
+        x: 280,
+        y: 200,
+        z: 30
     }
 }
