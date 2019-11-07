@@ -34,7 +34,7 @@ const Scene = ({ items }) => {
   addItemsToScene(items);
   
   // Draw!
-  render();
+  render(items);
 
   return <div ref={container} />
 };

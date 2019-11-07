@@ -7,7 +7,7 @@ function Box() {
 
     // Move the Sphere back in Z so we
     // can see it.
-    this.cube.position.x = 40;
+    this.cube.position.x = 90;
     this.cube.position.z = -250;
 
     return this.cube;

@@ -1,7 +1,7 @@
 export default {
     // Set the scene size.
-    WIDTH: 800,
-    HEIGHT: 600,
+    WIDTH: window.innerWidth,
+    HEIGHT: window.innerHeight,
 
     // Set some camera attributes.
     VIEW_ANGLE: 35,

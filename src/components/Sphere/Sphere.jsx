@@ -3,8 +3,8 @@ import * as THREE from "three";
 function Sphere () {
   // Set up the sphere vars
   const RADIUS = 50;
-  const SEGMENTS = 16;
-  const RINGS = 16;
+  const SEGMENTS = 36;
+  const RINGS = 36;
 
   // create the sphere's material
   const sphereMaterial = new THREE.MeshLambertMaterial({color: 0xCC0000});

@@ -5,6 +5,7 @@ const useScene = ({ WIDTH, HEIGHT, VIEW_ANGLE, ASPECT, NEAR, FAR }) => {
   let camera;
   let scene;
   let pointLight;
+  let itemsOfScene = [];
 
   const setRenderer = () => {
     renderer = new THREE.WebGLRenderer();
@@ -47,10 +48,22 @@ const useScene = ({ WIDTH, HEIGHT, VIEW_ANGLE, ASPECT, NEAR, FAR }) => {
   }
 
   const addItemsToScene = (items) => {
-    items.forEach(child => scene.add(child))
+    items.forEach(child => {
+      itemsOfScene.push(child);
+      scene.add(child)
+    })
   }
 
-  const render = () => renderer.render(scene, camera);
+  const render = () => {
+    requestAnimationFrame(render);
+
+    itemsOfScene.forEach(child => {
+      child.rotation.x += 0.01;
+      child.rotation.y += 0.01;
+    });
+
+    renderer.render(scene, camera);
+  }
 
   const update = () => {
     requestAnimationFrame(render);
